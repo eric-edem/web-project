@@ -14,6 +14,9 @@
 Route::get('/', "SearchController@index");
 Route::post('/', "SearchController@store");
 
+Route::get('/nhia', "NHIAUserController@index");
+Route::get('/nhia/create', "NHIAUserController@create");
+Route::post('/nhia', "NHIAUserController@store");
 
 Route::get('/dvla', "DVLAController@index");
 Route::get('/dvla/create', "DVLAController@create");

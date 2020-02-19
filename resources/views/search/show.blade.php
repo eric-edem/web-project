@@ -100,6 +100,43 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title ">National Health Insurance Authority Results</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                @if(count($NHIAUsers) > 0)
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Date of Birth</th>
+                                        <th>Ethnicity</th>
+                                        <th>SSN</th>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($NHIAUsers as $user)
+                                            <tr>
+                                                <td>{{$user->id}}</td>
+                                                <td>{{$user->first_name. " ". $user->last_name}}</td>
+                                                <td>{{\Carbon\Carbon::parse($user->date_of_birth)->toDateString()}}</td>
+                                                <td>{{$user->ethnicity}}</td>
+                                                <td class="text-primary">{{$user->ssn}}</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                @else
+                                    No results found in this Database for search param {{$name}}
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-md-12">

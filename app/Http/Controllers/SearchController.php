@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\DVLAUsers;
 use App\ECUsers;
 use App\GIS_User;
+use App\NHIAUser;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -20,7 +21,8 @@ class SearchController extends Controller
         $GISUsers = GIS_User::whereRaw("first_name like '%".$name."%'")->orWhereRaw("last_name like '%".$name."%'")->get();
         $ECUsers = ECUsers::whereRaw("first_name like '%".$name."%'")->orWhereRaw("last_name like '%".$name."%'")->get();
         $DVLAUsers = DVLAUsers::whereRaw("first_name like '%".$name."%'")->orWhereRaw("last_name like '%".$name."%'")->get();
+        $NHIAUsers = NHIAUser::whereRaw("first_name like '%".$name."%'")->orWhereRaw("last_name like '%".$name."%'")->get();
 
-        return view('search.show', compact("name", "GISUsers", "ECUsers", "routeVar", "DVLAUsers"));
+        return view('search.show', compact("name", "GISUsers", "ECUsers", "routeVar", "DVLAUsers", "NHIAUsers"));
     }
 }

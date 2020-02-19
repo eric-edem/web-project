@@ -6,10 +6,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title">Add Voter</h4>
+                        <h4 class="card-title">Add Immigrant</h4>
                     </div>
                     <div class="card-body">
-                        <form action="/ec" method="POST">
+                        <form action="/nhia" method="POST">
                             {{csrf_field()}}
                             <div class="row">
                                 <div class="col-md-6">

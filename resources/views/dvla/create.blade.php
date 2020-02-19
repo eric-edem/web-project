@@ -15,13 +15,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Fist Name</label>
-                                        <input type="text" name="first_name" class="form-control">
+                                        <input type="text" name="first_name" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Last Name</label>
-                                        <input type="text" name="last_name" class="form-control">
+                                        <input type="text" name="last_name" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -29,19 +29,19 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Ethnicity</label>
-                                        <input type="text" name="ethnicity" class="form-control">
+                                        <input type="text" name="ethnicity" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="bmd-label">Date of Birth</label>
-                                        <input type="date" name="date_of_birth" class="form-control">
+                                        <input type="date" name="date_of_birth" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">SSN</label>
-                                        <input type="text" name="ssn" class="form-control">
+                                        <input type="text" name="ssn" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
